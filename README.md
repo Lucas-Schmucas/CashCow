@@ -8,9 +8,10 @@ This project is a dashboard application designed to handle and analyze CSV expor
 
 - CSV import functionality for VR-Online-Banking exports
 - Data processing and cleaning
-- Interactive dashboard with financial visualizations
+- Due to the docker setup the application is containerized and can run on any system that has docker installed without the need to install php, mysql or any other dependencies.
 - Transaction categorization and analysis
-- Export capabilities for processed data
+- Interactive dashboard with financial visualizations (WIP)
+- Export capabilities for processed data (WIP)
 
 ## Installation
 
@@ -58,7 +59,7 @@ To set up this project locally, follow these steps:
 - Laravel 11.x
 - Filament 3
 - MySQL
-
+- Docker
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -71,4 +72,5 @@ This project is open-sourced software licensed under the [MIT license](https://o
 
 - [VR-Online-Banking](https://www.vr.de/) for providing the CSV export functionality
 - [Filament](https://filamentphp.com/) for the admin panel framework
-
+- [Laravel](https://laravel.com/) for the backend framework
+- [Docker](https://www.docker.com/) for the containerization platform 
