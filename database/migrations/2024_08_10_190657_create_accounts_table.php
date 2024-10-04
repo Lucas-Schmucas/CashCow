@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('accounts', function (Blueprint $table) {
             $table->id();
+            $table->string('iban', 34); 
+            $table->string('name')->nullable();
+            $table->string('bic')->nullable();
+            $table->foreignId('category_id')->nullable()->default(null)->constrained('categories');
             $table->timestamps();
         });
     }

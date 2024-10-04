@@ -5,13 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Counterparty extends Model {
+class Account extends Model {
 
     use HasFactory;
-
-    protected $fillable = ['counterparty_name', 'counterparty_iban', 'counterparty_bic'];
+    
+    
+    protected $fillable = ['iban', 'name', 'bic'];
 
     public function transactions() {
         return $this->hasMany(Transaction::class);
+    }
+
+    public function category() {
+        return $this->belongsTo(Category::class);
     }
 }

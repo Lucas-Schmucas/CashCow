@@ -15,6 +15,7 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
+use App\Http\Middleware\UseSystemUser;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 
 class CashCowPanelProvider extends PanelProvider
@@ -41,6 +42,7 @@ class CashCowPanelProvider extends PanelProvider
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,
                 StartSession::class,
+                UseSystemUser::class,
                 AuthenticateSession::class,
                 ShareErrorsFromSession::class,
                 VerifyCsrfToken::class,
