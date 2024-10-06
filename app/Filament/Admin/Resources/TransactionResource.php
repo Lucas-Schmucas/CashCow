@@ -47,8 +47,7 @@ class TransactionResource extends Resource
 
 
             ->filters([
-                SelectFilter::make('account_id')
-                    ->relationship('account', 'iban'),
+
                 SelectFilter::make('category_id')
                     ->relationship('account.category', 'name')
             ])
